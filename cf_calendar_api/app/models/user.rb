@@ -9,10 +9,18 @@ class User < ApplicationRecord
 
   attr_reader :name
 
-  scope :students, -> { where( types: { name: :student }) }
-  scope :teachers, -> { where( types: { name: :teacher }) }
+  scope :students, -> { joins(:types).where(types: { name: "student"}).order(:first_name) }
+  scope :teachers, -> { joins(:types).where(types: { name: "teacher"}).order(:first_name) }
 
   def name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
+
+  def self.student_including_mentors(student_id)
+    {
+      student: find(student_id),
+      mentors: teachers
+    }
+  end
+
 end
