@@ -14,7 +14,7 @@ class App extends React.Component {
         <p>{Title}</p>
         <Switch>
           <Route exact to="/" component={Students} />
-          <Route to="/student/:studentId" component={Student} />
+          <Route to="/students/:studentId" component={Student} />
           <Route
             exact
             to="/:studentId/schedule/:mentorId"
