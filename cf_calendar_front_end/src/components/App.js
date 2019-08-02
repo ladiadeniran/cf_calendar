@@ -13,11 +13,11 @@ class App extends React.Component {
       <>
         <p>{Title}</p>
         <Switch>
-          <Route exact to="/" component={Students} />
-          <Route to="/students/:studentId" component={Student} />
+          <Route exact path="/" component={Students} />
+          <Route path="/students/:studentId" component={Student} />
           <Route
             exact
-            to="/:studentId/schedule/:mentorId"
+            path="/:studentId/schedule/:mentorId"
             component={Schedule}
           />
           <Route component={NotFoundPage} />

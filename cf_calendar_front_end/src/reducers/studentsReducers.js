@@ -19,15 +19,8 @@ export function selectedStudent(state = null, action) {
 
 export function students(state = [], action) {
   switch (action.type) {
-    case types.REQUEST_STUDENTS:
-      return Object.assign({}, state, {
-        fetchStudents: action.payload
-      });
     case types.RECEIVE_STUDENTS:
-      return Object.assign({}, state, {
-        students: action.payload,
-        fetchStudents: false
-      });
+      return action.payload
     default:
       return state;
   }

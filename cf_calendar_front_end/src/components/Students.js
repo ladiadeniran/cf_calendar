@@ -14,7 +14,7 @@ class Students extends React.Component {
     const { students } = this.props;
     return  (
       <>
-        {students && students.map((student, index) => <Link to={`/students/${student.id}`} key={index}>{student.name}</Link>)}
+        {students && students.map((student, index) => <Link to={`/students/${student.id}`} key={index}>{student.first_name}</Link>)}
       </>
     );
   }
