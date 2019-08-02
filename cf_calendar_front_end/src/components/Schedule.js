@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class Student extends React.Component {
+class Schedule extends React.Component {
   render() {
     return <></>;
   }
 }
 
-Student.propTypes = {};
+Schedule.propTypes = {};
 
-export default Student;
+export default Schedule;

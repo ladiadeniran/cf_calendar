@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import StudentNameForm from "./StudentNameForm";
+import Students from "./Students";
 import Student from "./Student";
 import Schedule from "./Schedule";
 import NotFoundPage from "./NotFoundPage";
@@ -13,11 +13,11 @@ class App extends React.Component {
       <>
         <p>{Title}</p>
         <Switch>
-          <Route exact to="/" component={StudentNameForm} />
-          <Route exact to="/student/:studentName" component={Student} />
+          <Route exact to="/" component={Students} />
+          <Route to="/student/:studentId" component={Student} />
           <Route
             exact
-            to="/:studentName/schedule/:mentorName"
+            to="/:studentId/schedule/:mentorId"
             component={Schedule}
           />
           <Route component={NotFoundPage} />

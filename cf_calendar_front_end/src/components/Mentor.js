@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 class Mentor extends React.Component {
   render() {
-    const { mentor, studentName } = this.props;
-    const { name: mentorName } = mentor;
+    const { mentor, studentId } = this.props;
+    const { id: mentorId, name: mentorName } = mentor;
 
     return (
       <>
-        <Link to={`/${studentName}/schedule/${mentorName}`}>
+        <Link to={`/${studentId}/schedule/${mentorId}`}>
           {mentorName}
         </Link>
       </>
@@ -19,7 +19,7 @@ class Mentor extends React.Component {
 
 Mentor.propTypes = {
   mentor: PropTypes.obj,
-  studentName: PropTypes.string
+  studentId: PropTypes.string
 };
 
 export default Mentor;
