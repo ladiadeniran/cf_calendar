@@ -9,31 +9,10 @@ export function requestStudents() {
   };
 }
 
-export function receiveStudent(payload) {
-   return {
-     type: types.RECEIVE_STUDENT,
-     payload
-   };
-}
-
-export function receiveMentors(payload) {
-  return {
-    type: types.RECEIVE_MENTORS,
-    payload
-  };
-}
-
 export function receiveStudents(payload) {
   return {
     type: types.RECEIVE_STUDENTS,
     payload
-  };
-}
-
-export function selectStudent(studentId) {
-  return {
-    type: types.SELECT_STUDENT,
-    studentId
   };
 }
 
@@ -48,18 +27,5 @@ export function getAllStudents() {
         dispatch(receiveStudents(students));
       })
       .catch();
-  }
-}
-
-export function getStudent(studentId) {
-  return function(dispatch) {
-     return axiosInstance
-       .get(`/students/${studentId}.json`)
-       .then(response => {
-         const { data } = response;
-         dispatch(receiveStudent(data.student));
-         dispatch(receiveMentors(data.mentors))
-       })
-       .catch();
   }
 }
