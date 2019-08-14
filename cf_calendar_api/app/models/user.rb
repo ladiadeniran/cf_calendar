@@ -9,14 +9,7 @@ class User < ApplicationRecord
 
 
   scope :students, -> { joins(:types).where(types: { name: "student"}).order(:first_name) }
-  scope :teachers, -> { joins(:types).where(types: { name: "teacher"}).order(:first_name) }
-
-  def self.student_including_mentors(student_id)
-    {
-      student: find(student_id),
-      mentors: teachers
-    }
-  end
+  scope :mentors, -> { joins(:types).where(types: { name: "mentor"}).order(:first_name) }
 
   def first_name
     super.capitalize

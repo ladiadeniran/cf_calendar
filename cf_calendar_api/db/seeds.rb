@@ -15,7 +15,7 @@ user_3 = User.create!(first_name: "dan", last_name: "abramov", email: "dan.abram
 user_4 = User.create!(first_name: "tyler", last_name: "gummings", email: "tyler.gummings@gmail.com")
 
 type1 = Type.create!(name: :student)
-type2 = Type.create!(name: :teacher)
+type2 = Type.create!(name: :mentor)
 
 UserType.create!(user_id: user_1.id, type_id: type1.id)
 UserType.create!(user_id: user_2.id, type_id: type1.id)

@@ -4,6 +4,6 @@ class StudentsController < ApplicationController
   end
 
   def show
-    render_json(User.student_including_mentors(params[:id]))
+    render_json(User.find(params[:student_id]))
   end
 end

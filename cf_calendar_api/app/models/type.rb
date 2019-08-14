@@ -1,7 +1,7 @@
 class Type < ApplicationRecord
   enum name: {
     student: "student",
-    teacher: "teacher"
+    mentor: "mentor"
   }
 
   has_many :user_types
