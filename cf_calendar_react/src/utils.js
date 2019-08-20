@@ -1,0 +1,4 @@
+// Setting this here temporarily
+import axios from "axios";
+
+export const axiosInstance = axios.create({ baseURL: "http://127.0.0.1:4000" });
