@@ -1,4 +1,4 @@
 class UserType < ApplicationRecord
-  belongs_to :user
-  belongs_to :type
+  belongs_to :user, dependent: :destroy
+  belongs_to :type, dependent: :destroy
 end

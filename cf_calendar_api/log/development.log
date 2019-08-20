@@ -2517,3 +2517,2832 @@ Processing by MentorsController#index as JSON
 Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/students.json" for 127.0.0.1 at 2019-08-14 23:57:27 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 95ms (Views: 18.0ms | ActiveRecord: 60.8ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-08-14 23:58:02 +0100
+Processing by StudentsController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-14 23:58:12 +0100
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-15 00:07:49 +0100
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-15 00:07:49 +0100
+Processing by MentorsController#index as JSON
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 59ms (Views: 48.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-15 00:07:52 +0100
+Processing by MentorsController#index as JSON
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-15 00:07:52 +0100
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+
+
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-15 00:22:17 +0100
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-15 00:22:17 +0100
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-15 00:22:31 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-15 00:22:31 +0100
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 3.6ms)
+
+
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-15 00:23:36 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-15 00:23:36 +0100
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.2ms)
+
+
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-08-19 11:54:24 +0100
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as JSON
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 243ms (Views: 53.0ms | ActiveRecord: 172.7ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-08-19 11:54:36 +0100
+Processing by StudentsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 11:55:56 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 11:55:56 +0100
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+
+
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 11:56:06 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 11:56:06 +0100
+Processing by MentorsController#index as JSON
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 12:42:43 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 12:42:43 +0100
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 64ms (Views: 2.0ms | ActiveRecord: 10.2ms)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 199ms (Views: 193.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 12:49:34 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 12:49:34 +0100
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 13:10:14 +0100
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 13:10:14 +0100
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 1.4ms)
+
+
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 13:12:34 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 13:12:34 +0100
+Processing by MentorsController#index as JSON
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (39.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 52ms (Views: 9.6ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/mentors.json" for 127.0.0.1 at 2019-08-19 13:12:39 +0100
+Started GET "/students/14.json" for 127.0.0.1 at 2019-08-19 13:12:39 +0100
+Processing by StudentsController#show as JSON
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as JSON
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/students_controller.rb:7
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 5.4ms)
+
+
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:11:55 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (50.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 271ms (Views: 141.1ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:12:10 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:12:42 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:14:25 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:14:35 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:16:07 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:20:43 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:21:48 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:21:58 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:22:40 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:24:20 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/student/14" for 127.0.0.1 at 2019-08-20 00:24:28 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:24:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/student/14"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 64ms (Views: 27.2ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/student/14" for 127.0.0.1 at 2019-08-20 00:24:52 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:24:52 +0100
+  
+Processing by MentorsController#index as HTML
+ActionController::RoutingError (No route matches [GET] "/student/14"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/student/14" for 127.0.0.1 at 2019-08-20 00:25:06 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:25:06 +0100
+  
+Processing by MentorsController#index as HTML
+ActionController::RoutingError (No route matches [GET] "/student/14"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/student/14" for 127.0.0.1 at 2019-08-20 00:26:04 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:26:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/student/14"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:26:32 +0100
+Processing by MentorsController#index as HTML
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:26:32 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (163.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 165ms (Views: 1.4ms | ActiveRecord: 163.3ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:26:55 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:26:55 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (41.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 49ms (Views: 6.0ms | ActiveRecord: 41.9ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 164ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 00:26:57 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (40.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 53ms (Views: 11.4ms | ActiveRecord: 40.6ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:26:59 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:26:59 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 42ms (Views: 0.3ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:28:08 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:28:08 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:29:25 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:29:25 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:30:23 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:30:23 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (41.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 44ms (Views: 1.6ms | ActiveRecord: 41.7ms)
+
+
+  [1m[36mUser Load (81.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 83ms (Views: 0.4ms | ActiveRecord: 81.4ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:31:57 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:31:57 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (163.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 165ms (Views: 0.4ms | ActiveRecord: 163.4ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:32:59 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:32:59 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 43ms (Views: 0.4ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:34:00 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:34:00 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (83.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 85ms (Views: 0.5ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:34:03 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:34:03 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:34:06 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:34:06 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (81.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 81.9ms)
+
+
+  [1m[36mUser Load (82.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 84ms (Views: 1.3ms | ActiveRecord: 82.2ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:34:11 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:34:11 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:34:18 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:34:18 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.0ms)
+
+
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:35:09 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:35:09 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:35:34 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:35:34 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (81.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 83ms (Views: 1.4ms | ActiveRecord: 81.6ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:35:45 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:35:45 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:36:47 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:36:47 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (42.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 45ms (Views: 2.7ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:37:32 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:37:32 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (41.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 47ms (Views: 5.3ms | ActiveRecord: 41.4ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:39:47 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:39:47 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 46ms (Views: 3.7ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:40:53 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:40:53 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mUser Load (233.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 236ms (Views: 2.4ms | ActiveRecord: 233.5ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:41:00 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:41:00 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 7.6ms)
+
+
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:42:52 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:42:52 +0100
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+Processing by StudentsController#show as HTML
+  ↳ app/controllers/concerns/render_concern.rb:5
+  Parameters: {"student_id"=>"14"}
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:43:11 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:43:11 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:43:14 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:43:14 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (40.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 43ms (Views: 1.7ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:43:54 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:43:54 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (41.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 43ms (Views: 1.7ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 00:44:28 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 00:44:28 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:20:40 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:20:40 +0100
+  [1m[35m (41.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+  [1m[35m (42.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:20:53 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:20:53 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (49.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (171.9ms)[0m  [1m[35mCREATE TABLE "calendar_entries" ("id" bigserial primary key, "date" date NOT NULL, "time" time NOT NULL, "duration" integer NOT NULL, "user_id" integer, "available" boolean DEFAULT TRUE NOT NULL)[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_calendar_entries_on_date_and_time" ON "calendar_entries"  ("date", "time")[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820001050"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (120.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:21:18 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:21:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 71ms (Views: 7.6ms | ActiveRecord: 6.1ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (72.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 77.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ":"
+LINE 1: ..."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:21:20 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:21:20 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ":"
+LINE 1: ..."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:21) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+  [1m[36mUser Load (60.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 62.7ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:21:48 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:21:48 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 7.7ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20::DATE AND time >= 02:21::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 14.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ":"
+LINE 1: ... = $1 AND (date >= 2019-08-20::DATE AND time >= 02:21::TIME)...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20::DATE AND time >= 02:21::TIME) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:22:21 +0100
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:22:21 +0100
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (40.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:22) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 46.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ":"
+LINE 1: ..."name" = $1 AND (date >= 2019-08-20 AND time >= 02:22) ORDER...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20 AND time >= 02:22) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:22:56 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:22:56 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 140ms (Views: 0.6ms | ActiveRecord: 7.6ms)
+
+
+  [1m[36mUser Load (278.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 474ms (ActiveRecord: 317.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedFunction: ERROR:  operator does not exist: date >= integer
+LINE 1: ... "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= 2019-08-20) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:23:39 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:23:39 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 9.9ms)
+
+
+  [1m[36mUser Load (41.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= (2019-08-20)::DATE AND time >= (02:23)::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 51.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ":"
+LINE 1: ...$1 AND (date >= (2019-08-20)::DATE AND time >= (02:23)::TIME...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= (2019-08-20)::DATE AND time >= (02:23)::TIME) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:24:16 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:24:16 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 8.4ms)
+
+
+  [1m[36mUser Load (84.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2019-08-20'::DATE AND time >= '02:24'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 115ms (Views: 4.7ms | ActiveRecord: 96.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (137.4ms)[0m  [1m[35mDROP TABLE "calendar_entries"[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:15
+  [1m[36mActiveRecord::SchemaMigration Destroy (163.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190820001050"]]
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (88.2ms)[0m  [1m[35mCREATE TABLE "calendar_entries" ("id" bigserial primary key, "date" date NOT NULL, "time" time NOT NULL, "duration" integer NOT NULL, "user_id" integer, "available" boolean DEFAULT TRUE NOT NULL)[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_calendar_entries_on_date_and_time_and_user_id" ON "calendar_entries"  ("date", "time", "user_id")[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820001050"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (41.6ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (21.9ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (25.9ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:31:02.393362"], ["updated_at", "2019-08-20 01:31:02.393362"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:31:02.398453"], ["updated_at", "2019-08-20 01:31:02.398453"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:31:02.400675"], ["updated_at", "2019-08-20 01:31:02.400675"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:31:02.402822"], ["updated_at", "2019-08-20 01:31:02.402822"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (1.0ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:31:02.406732"], ["updated_at", "2019-08-20 01:31:02.406732"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:31:02.410056"], ["updated_at", "2019-08-20 01:31:02.410056"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (41.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.4ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:32:14.501721"], ["updated_at", "2019-08-20 01:32:14.501721"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:32:14.504290"], ["updated_at", "2019-08-20 01:32:14.504290"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:32:14.506596"], ["updated_at", "2019-08-20 01:32:14.506596"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:32:14.508917"], ["updated_at", "2019-08-20 01:32:14.508917"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.9ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:32:14.511313"], ["updated_at", "2019-08-20 01:32:14.511313"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:32:14.514147"], ["updated_at", "2019-08-20 01:32:14.514147"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.0ms)[0m  [1m[35mDROP TABLE "calendar_entries"[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:15
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190820001050"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.5ms)[0m  [1m[35mCREATE TABLE "calendar_entries" ("id" bigserial primary key, "day" date NOT NULL, "time" time NOT NULL, "duration" integer NOT NULL, "user_id" integer, "available" boolean DEFAULT TRUE NOT NULL)[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_calendar_entries_on_date_and_time_and_user_id" ON "calendar_entries"  ("date", "time", "user_id")[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCalendarEntries (20190820001050)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (41.6ms)[0m  [1m[35mCREATE TABLE "calendar_entries" ("id" bigserial primary key, "day" date NOT NULL, "time" time NOT NULL, "duration" integer NOT NULL, "user_id" integer, "available" boolean DEFAULT TRUE NOT NULL)[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_calendar_entries_on_day_and_time_and_user_id" ON "calendar_entries"  ("day", "time", "user_id")[0m
+  ↳ db/migrate/20190820001050_create_calendar_entries.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820001050"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (6.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (1.0ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:34:01.709424"], ["updated_at", "2019-08-20 01:34:01.709424"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:34:01.712284"], ["updated_at", "2019-08-20 01:34:01.712284"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:34:01.714380"], ["updated_at", "2019-08-20 01:34:01.714380"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:34:01.716234"], ["updated_at", "2019-08-20 01:34:01.716234"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:34:01.718104"], ["updated_at", "2019-08-20 01:34:01.718104"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:34:01.720010"], ["updated_at", "2019-08-20 01:34:01.720010"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.3ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:34:47.291972"], ["updated_at", "2019-08-20 01:34:47.291972"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:34:47.294812"], ["updated_at", "2019-08-20 01:34:47.294812"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:34:47.297188"], ["updated_at", "2019-08-20 01:34:47.297188"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:34:47.299364"], ["updated_at", "2019-08-20 01:34:47.299364"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:34:47.301385"], ["updated_at", "2019-08-20 01:34:47.301385"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.1ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:34:47.303289"], ["updated_at", "2019-08-20 01:34:47.303289"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (2.9ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:35:39.600407"], ["updated_at", "2019-08-20 01:35:39.600407"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:35:39.602928"], ["updated_at", "2019-08-20 01:35:39.602928"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:35:39.605532"], ["updated_at", "2019-08-20 01:35:39.605532"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:35:39.607939"], ["updated_at", "2019-08-20 01:35:39.607939"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:35:39.610321"], ["updated_at", "2019-08-20 01:35:39.610321"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.3ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:35:39.612354"], ["updated_at", "2019-08-20 01:35:39.612354"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUserType Create (68.4ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 33], ["type_id", 16], ["created_at", "2019-08-20 01:35:39.629420"], ["updated_at", "2019-08-20 01:35:39.629420"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 34], ["type_id", 16], ["created_at", "2019-08-20 01:35:39.702091"], ["updated_at", "2019-08-20 01:35:39.702091"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 35], ["type_id", 17], ["created_at", "2019-08-20 01:35:39.705454"], ["updated_at", "2019-08-20 01:35:39.705454"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 36], ["type_id", 17], ["created_at", "2019-08-20 01:35:39.708462"], ["updated_at", "2019-08-20 01:35:39.708462"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:9
+  [1m[35m (231.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.4ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:37:19.489713"], ["updated_at", "2019-08-20 01:37:19.489713"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:37:19.492180"], ["updated_at", "2019-08-20 01:37:19.492180"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:37:19.494422"], ["updated_at", "2019-08-20 01:37:19.494422"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:37:19.496683"], ["updated_at", "2019-08-20 01:37:19.496683"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:37:19.499002"], ["updated_at", "2019-08-20 01:37:19.499002"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:37:19.501352"], ["updated_at", "2019-08-20 01:37:19.501352"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUserType Create (0.4ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["type_id", 18], ["created_at", "2019-08-20 01:37:19.513549"], ["updated_at", "2019-08-20 01:37:19.513549"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["type_id", 18], ["created_at", "2019-08-20 01:37:19.516530"], ["updated_at", "2019-08-20 01:37:19.516530"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["type_id", 19], ["created_at", "2019-08-20 01:37:19.519215"], ["updated_at", "2019-08-20 01:37:19.519215"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["type_id", 19], ["created_at", "2019-08-20 01:37:19.521720"], ["updated_at", "2019-08-20 01:37:19.521720"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:9
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.5ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.5ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:37:30.037850"], ["updated_at", "2019-08-20 01:37:30.037850"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:37:30.044582"], ["updated_at", "2019-08-20 01:37:30.044582"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:37:30.047128"], ["updated_at", "2019-08-20 01:37:30.047128"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:37:30.049335"], ["updated_at", "2019-08-20 01:37:30.049335"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:37:30.052019"], ["updated_at", "2019-08-20 01:37:30.052019"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:37:30.054258"], ["updated_at", "2019-08-20 01:37:30.054258"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:9
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 43]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.4ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:38:01.555729"], ["updated_at", "2019-08-20 01:38:01.555729"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:38:01.558348"], ["updated_at", "2019-08-20 01:38:01.558348"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:38:01.560717"], ["updated_at", "2019-08-20 01:38:01.560717"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:38:01.562798"], ["updated_at", "2019-08-20 01:38:01.562798"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:38:01.565178"], ["updated_at", "2019-08-20 01:38:01.565178"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:38:01.567320"], ["updated_at", "2019-08-20 01:38:01.567320"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5535626593922531295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 45]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 48]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.5ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:40:13.721504"], ["updated_at", "2019-08-20 01:40:13.721504"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:40:13.751562"], ["updated_at", "2019-08-20 01:40:13.751562"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:40:13.754020"], ["updated_at", "2019-08-20 01:40:13.754020"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:40:13.756431"], ["updated_at", "2019-08-20 01:40:13.756431"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.3ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:40:13.759183"], ["updated_at", "2019-08-20 01:40:13.759183"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:40:13.761504"], ["updated_at", "2019-08-20 01:40:13.761504"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUserType Create (0.3ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 49], ["type_id", 24], ["created_at", "2019-08-20 01:40:13.784444"], ["updated_at", "2019-08-20 01:40:13.784444"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 50], ["type_id", 24], ["created_at", "2019-08-20 01:40:13.829031"], ["updated_at", "2019-08-20 01:40:13.829031"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 51], ["type_id", 25], ["created_at", "2019-08-20 01:40:13.834591"], ["updated_at", "2019-08-20 01:40:13.834591"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 52], ["type_id", 25], ["created_at", "2019-08-20 01:40:13.837692"], ["updated_at", "2019-08-20 01:40:13.837692"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  ↳ db/seeds.rb:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 50]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.3ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.3ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:40:49.646660"], ["updated_at", "2019-08-20 01:40:49.646660"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:40:49.691117"], ["updated_at", "2019-08-20 01:40:49.691117"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:40:49.693701"], ["updated_at", "2019-08-20 01:40:49.693701"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:40:49.696258"], ["updated_at", "2019-08-20 01:40:49.696258"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:40:49.698807"], ["updated_at", "2019-08-20 01:40:49.698807"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.1ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:40:49.700742"], ["updated_at", "2019-08-20 01:40:49.700742"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUserType Create (0.3ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 53], ["type_id", 26], ["created_at", "2019-08-20 01:40:49.713952"], ["updated_at", "2019-08-20 01:40:49.713952"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 54], ["type_id", 26], ["created_at", "2019-08-20 01:40:49.717494"], ["updated_at", "2019-08-20 01:40:49.717494"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 55], ["type_id", 27], ["created_at", "2019-08-20 01:40:49.720309"], ["updated_at", "2019-08-20 01:40:49.720309"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 56], ["type_id", 27], ["created_at", "2019-08-20 01:40:49.723178"], ["updated_at", "2019-08-20 01:40:49.723178"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCalendarEntry Create (0.6ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-20"], ["time", "23:59:00"], ["duration", 1], ["user_id", 55]]
+  ↳ db/seeds.rb:27
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (40.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 55]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 56]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mType Destroy (0.2ms)[0m  [1m[31mDELETE FROM "types" WHERE "types"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCalendarEntry Load (0.4ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCalendarEntry Destroy (0.2ms)[0m  [1m[31mDELETE FROM "calendar_entries" WHERE "calendar_entries"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ladi.bond@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "ladi"], ["last_name", "bond"], ["email", "ladi.bond@gmail.com"], ["created_at", "2019-08-20 01:41:08.559927"], ["updated_at", "2019-08-20 01:41:08.559927"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biola.stallion@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "biola"], ["last_name", "stallion"], ["email", "biola.stallion@gmail.com"], ["created_at", "2019-08-20 01:41:08.562523"], ["updated_at", "2019-08-20 01:41:08.562523"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan.abramov@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "dan"], ["last_name", "abramov"], ["email", "dan.abramov@gmail.com"], ["created_at", "2019-08-20 01:41:08.564826"], ["updated_at", "2019-08-20 01:41:08.564826"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyler.gummings@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "tyler"], ["last_name", "gummings"], ["email", "tyler.gummings@gmail.com"], ["created_at", "2019-08-20 01:41:08.567037"], ["updated_at", "2019-08-20 01:41:08.567037"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "student"], ["created_at", "2019-08-20 01:41:08.569190"], ["updated_at", "2019-08-20 01:41:08.569190"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mType Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "types" WHERE "types"."name" = $1 LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mType Create (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "mentor"], ["created_at", "2019-08-20 01:41:08.571194"], ["updated_at", "2019-08-20 01:41:08.571194"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUserType Create (0.4ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 57], ["type_id", 28], ["created_at", "2019-08-20 01:41:08.583093"], ["updated_at", "2019-08-20 01:41:08.583093"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUserType Create (0.3ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 58], ["type_id", 28], ["created_at", "2019-08-20 01:41:08.586730"], ["updated_at", "2019-08-20 01:41:08.586730"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 59], ["type_id", 29], ["created_at", "2019-08-20 01:41:08.590361"], ["updated_at", "2019-08-20 01:41:08.590361"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUserType Create (0.2ms)[0m  [1m[32mINSERT INTO "user_types" ("user_id", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 60], ["type_id", 29], ["created_at", "2019-08-20 01:41:08.593120"], ["updated_at", "2019-08-20 01:41:08.593120"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCalendarEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-20"], ["time", "23:59:00"], ["duration", 1], ["user_id", 59]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mCalendarEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-21"], ["time", "23:59:00"], ["duration", 1], ["user_id", 59]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCalendarEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-22"], ["time", "23:59:00"], ["duration", 1], ["user_id", 59]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mCalendarEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-20"], ["time", "23:59:00"], ["duration", 1], ["user_id", 60]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mCalendarEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-21"], ["time", "23:59:00"], ["duration", 1], ["user_id", 60]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mCalendarEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "calendar_entries" ("day", "time", "duration", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["day", "2019-08-22"], ["time", "23:59:00"], ["duration", 1], ["user_id", 60]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:41:12 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:41:12 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ladipo/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 10ms (Views: 0.1ms | ActiveRecord: 4.5ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (135.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 140.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "date" does not exist
+LINE 1: ...id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "types.name" or the column "calendar_entries.day".
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:41:14 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:41:14 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "date" does not exist
+LINE 1: ...id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "types.name" or the column "calendar_entries.day".
+: SELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (date >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC):
+  
+app/controllers/concerns/render_concern.rb:5:in `render_json'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:41:37 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:41:37 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 23ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 37ms (Views: 14.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:41:39 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:41:39 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:41'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:41:59 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:41:59 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 17ms (Views: 0.1ms | ActiveRecord: 8.3ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day <= '2019-08-20'::DATE AND time <= '02:41'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 57ms (Views: 8.8ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/students/14" for 127.0.0.1 at 2019-08-20 02:42:00 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:42:00 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day <= '2019-08-20'::DATE AND time <= '02:42'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-08-20 02:42:28 +0100
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" WHERE "types"."name" = $1 ORDER BY "users"."first_name" ASC[0m  [["name", "student"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:42:30 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:42:30 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day <= '2019-08-20'::DATE AND time <= '02:42'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:44:02 +0100
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:44:02 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:44'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 32ms (Views: 9.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:44:39 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:44:39 +0100
+Processing by StudentsController#show as HTML
+Processing by MentorsController#index as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 10.4ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:44'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 11]]
+  ↳ /Users/ladipo/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 12.5ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:44'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 11]]
+  ↳ /Users/ladipo/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `unique' for #<User::ActiveRecord_Relation:0x00007fc58001a5e8>
+Did you mean?  uniq):
+  
+app/models/user.rb:14:in `block in <class:User>'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:44:40 +0100
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:44:40 +0100
+Processing by MentorsController#index as HTML
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:44'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 11]]
+  ↳ /Users/ladipo/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:44'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 11]]
+  ↳ /Users/ladipo/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `unique' for #<User::ActiveRecord_Relation:0x00007fc57d00d3a0>
+Did you mean?  uniq):
+  
+app/models/user.rb:14:in `block in <class:User>'
+app/controllers/mentors_controller.rb:3:in `index'
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:46:12 +0100
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:46:12 +0100
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:46'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 28ms (Views: 9.4ms | ActiveRecord: 6.7ms)
+
+
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:46:18 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:46:18 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"58"}
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:46'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 16ms (Views: 4.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/students/58" for 127.0.0.1 at 2019-08-20 02:47:57 +0100
+Started GET "/mentors" for 127.0.0.1 at 2019-08-20 02:47:57 +0100
+Processing by StudentsController#show as HTML
+  Parameters: {"student_id"=>"58"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:48'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ (pry):1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:48'::TIME) ORDER BY "users"."first_name" ASC LIMIT $2[0m  [["name", "mentor"], ["LIMIT", 1]]
+  ↳ (pry):2
+  [1m[36mCalendarEntry Load (0.2ms)[0m  [1m[34mSELECT "calendar_entries".* FROM "calendar_entries" WHERE "calendar_entries"."user_id" = $1[0m  [["user_id", 59]]
+  ↳ app/controllers/mentors_controller.rb:3
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "user_types" ON "user_types"."user_id" = "users"."id" INNER JOIN "types" ON "types"."id" = "user_types"."type_id" INNER JOIN "calendar_entries" ON "calendar_entries"."user_id" = "users"."id" WHERE "types"."name" = $1 AND (day >= '2019-08-20'::DATE AND time >= '02:50'::TIME) ORDER BY "users"."first_name" ASC[0m  [["name", "mentor"]]
+  ↳ app/controllers/concerns/render_concern.rb:5
+Completed 200 OK in 136582ms (Views: 9.5ms | ActiveRecord: 9.1ms)
+
+
