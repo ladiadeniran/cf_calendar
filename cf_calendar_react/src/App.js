@@ -9,7 +9,7 @@ import NotFoundPage from "./NotFoundPage";
 
 class App extends React.Component {
   render() {
-    const Title = "Agenda";
+    const Title = "Schedule Appointment";
     return (
       <Container>
        <p></p>
