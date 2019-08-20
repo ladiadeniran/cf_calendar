@@ -15,7 +15,23 @@ export default class Student extends React.Component {
     this.getstudentAndMentors();
   }
 
-
+  postScheduledEvent = (event, entryId) => {
+    axiosInstance.post("/events", {
+      event,
+      entry_id: entryId
+    })
+      .then(response => {
+        if (response.status === 200) {
+          this.getMentors()
+            .then(response => (
+              this.setState(() => ({
+                mentors: response.data
+              }))
+            ))
+        }
+      })
+      .catch()
+  }
 
   getStudent = (studentId) => {
     return axiosInstance.get(`/students/${studentId}`)
@@ -45,10 +61,15 @@ export default class Student extends React.Component {
     const { first_name: studentName } = student;
     return (
       <>
-        <p>Welcome, {studentName}</p>
+        <p>Welcome {studentName}, </p>
         {mentors &&
           mentors.map((mentor, index) => (
-            <Mentor key={index} mentor={mentor} studentId={student.id} />
+            <Mentor
+              key={index}
+              mentor={mentor}
+              studentId={student.id}
+              postScheduledEvent={this.postScheduledEvent}
+            />
           ))}
       </>
     );
