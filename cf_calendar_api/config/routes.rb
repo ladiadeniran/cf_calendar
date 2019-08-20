@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   get "mentors" => "mentors#index"
 
+  post "events" => "events#create"
+
   root to: "students#index"
 end

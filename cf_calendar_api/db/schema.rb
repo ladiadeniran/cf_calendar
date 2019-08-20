@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 2019_08_20_001050) do
   create_table "events", force: :cascade do |t|
     t.integer "student_id", null: false
     t.integer "mentor_id", null: false
-    t.date "datetime", null: false
+    t.datetime "date", null: false
     t.integer "duration"
-    t.index ["mentor_id", "student_id", "datetime"], name: "index_events_on_mentor_id_and_student_id_and_datetime", unique: true
+    t.index ["mentor_id", "student_id", "date"], name: "index_events_on_mentor_id_and_student_id_and_date", unique: true
   end
 
   create_table "types", force: :cascade do |t|
