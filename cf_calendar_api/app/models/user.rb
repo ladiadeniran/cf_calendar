@@ -14,11 +14,11 @@ class User < ApplicationRecord
   scope :with_free_schedules, -> { joins(:calendar_entries).where("day >= '#{Date.today}'::DATE AND time >= '#{Time.now.to_s(:time)}'::TIME AND available IS TRUE").distinct }
 
   def first_name
-    super.capitalize
+    super&.capitalize
   end
 
   def last_name
-    super.capitalize
+    super&.capitalize
   end
 
   def self.mentors_with_free_schedules
