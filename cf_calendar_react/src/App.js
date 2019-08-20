@@ -4,7 +4,7 @@ import { Container, Header, Divider } from "semantic-ui-react";
 
 import Students from "./Students";
 import Student from "./Student";
-import Schedule from "./Schedule";
+import Date from "./Date";
 import NotFoundPage from "./NotFoundPage";
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
     const Title = "Schedule Appointment";
     return (
       <Container>
-       <p></p>
+        <p />
         <Container text>
           <Header as="h1" textAlign="center">
             {Title}
@@ -26,7 +26,7 @@ class App extends React.Component {
             <Route
               exact
               path="/:studentId/schedule/:mentorId"
-              component={Schedule}
+              component={Date}
             />
             <Route component={NotFoundPage} />
           </Switch>

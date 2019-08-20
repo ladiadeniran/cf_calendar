@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import axios from 'axios';
+// import axios from 'axios';
 import { List, Divider } from "semantic-ui-react";
 
 import { axiosInstance } from "./utils";
@@ -34,27 +34,18 @@ export default class Student extends React.Component {
       .catch()
   }
 
-  getStudent = (studentId) => {
-    return axiosInstance.get(`/students/${studentId}`)
-  }
-
-  getMentors = () => {
-    return axiosInstance.get(`/mentors`);
-  }
-
   getstudentAndMentors = () => {
-    const { studentId } = this.props.match.params;
-    axios
-      .all([this.getStudent(studentId), this.getMentors()])
-      .then(
-        axios.spread((studentResponse, mentorsResponse) =>
-          this.setState(() => ({
-            student: studentResponse.data,
-            mentors: mentorsResponse.data
-          }))
-        )
-      )
-      .catch();
+      const { studentId } = this.props.match.params;
+      axiosInstance
+        .get(`/students/${studentId}`)
+        .then(response => (
+          this.setState(() => (
+            this.setState(() => ({
+              student: response.data.student,
+              mentors: response.data.mentors
+            }))
+          ))
+        ))
   }
 
   render() {
@@ -66,7 +57,7 @@ export default class Student extends React.Component {
         <List bulleted>
           {mentors &&
             mentors.map((mentor, index) => (
-              <List.Item>
+              <List.Item key={index}>
                 <Mentor
                   key={index}
                   mentor={mentor}

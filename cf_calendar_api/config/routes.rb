@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get "students" => "students#index"
   get "students/:student_id" => "students#show"
 
-  get "mentors" => "mentors#index"
-
   post "events" => "events#create"
 
   root to: "students#index"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_20_001050) do
+ActiveRecord::Schema.define(version: 2019_08_20_224455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,21 +29,14 @@ ActiveRecord::Schema.define(version: 2019_08_20_001050) do
     t.integer "mentor_id", null: false
     t.datetime "date", null: false
     t.integer "duration"
+    t.text "description"
     t.index ["mentor_id", "student_id", "date"], name: "index_events_on_mentor_id_and_student_id_and_date", unique: true
   end
 
-  create_table "types", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_types", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "type_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "type_id"], name: "index_user_types_on_user_id_and_type_id", unique: true
+  create_table "student_mentors", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "mentor_id"
+    t.index ["mentor_id", "student_id"], name: "index_student_mentors_on_mentor_id_and_student_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
