@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   scope :students, -> { joins(:types).where(types: { name: "student"}).order(:first_name) }
   scope :mentors, -> { joins(:types).where(types: { name: "mentor"}).order(:first_name) }
-  scope :with_future_calendar_entries, -> { joins(:calendar_entries).where("day >= '#{Date.today}'::DATE AND time >= '#{Time.now.to_s(:time)}'::TIME").distinct }
+  scope :with_free_schedules, -> { joins(:calendar_entries).where("day >= '#{Date.today}'::DATE AND time >= '#{Time.now.to_s(:time)}'::TIME AND available IS TRUE").distinct }
 
   def first_name
     super.capitalize
@@ -19,5 +19,21 @@ class User < ApplicationRecord
 
   def last_name
     super.capitalize
+  end
+
+  def self.mentors_with_free_schedules
+    mentors.with_free_schedules.map do |mentor|
+      entries = mentor.calendar_entries.select { |entry| entry.day >= Date.today && entry.time >= Time.now.to_s(:time) && entry.available == true }
+      mentor.serialize_mentor(entries)
+    end
+  end
+
+  # TODO handle this more gracefully
+  def serialize_mentor(entries)
+    {
+      id: self.id,
+      first_name: self.first_name,
+      calendar_entries: self.calendar_entries
+    }
   end
 end
