@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Container, List, Header } from "semantic-ui-react";
 
 import Schedule from './Schedule';
 
@@ -14,8 +15,8 @@ export default class Mentor extends React.Component {
     } = mentor;
     return (
       <>
-        <p>Schedule with {mentorName}</p>
-        {calendarEntries.map((entry) =>  entry.available && (<Schedule key={entry.id} entry={entry} studentId={studentId} mentorId={mentorId} postScheduledEvent={this.props.postScheduledEvent} />))}
+        <Header as='h5' className='mentor-name'>{mentorName}</Header>
+            {calendarEntries.map((entry) =>  entry.available && (<Schedule key={entry.id} entry={entry} studentId={studentId} mentorId={mentorId} postScheduledEvent={this.props.postScheduledEvent} />))}
       </>
     );
   }

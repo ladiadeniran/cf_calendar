@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import axios from 'axios';
+import { List, Divider } from "semantic-ui-react";
 
 import { axiosInstance } from "./utils";
 import Mentor from "./Mentor";
@@ -61,16 +62,21 @@ export default class Student extends React.Component {
     const { first_name: studentName } = student;
     return (
       <>
-        <p>Welcome {studentName}, </p>
-        {mentors &&
-          mentors.map((mentor, index) => (
-            <Mentor
-              key={index}
-              mentor={mentor}
-              studentId={student.id}
-              postScheduledEvent={this.postScheduledEvent}
-            />
-          ))}
+        <p>Welcome {studentName} find below the available slots on each mentor's calendar </p>
+        <List bulleted>
+          {mentors &&
+            mentors.map((mentor, index) => (
+              <List.Item>
+                <Mentor
+                  key={index}
+                  mentor={mentor}
+                  studentId={student.id}
+                  postScheduledEvent={this.postScheduledEvent}
+                />
+                <Divider/>
+              </List.Item>
+            ))}
+        </List>
       </>
     );
   }

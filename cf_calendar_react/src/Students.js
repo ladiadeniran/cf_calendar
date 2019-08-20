@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Header } from "semantic-ui-react";
 
 import { axiosInstance } from './utils';
 
@@ -27,9 +28,17 @@ export default class Students extends React.Component {
 
   render() {
     const { students } = this.state;
-    return  (
+    return (
       <>
-        {students && students.map((student, index) => <Link to={`/students/${student.id}`} key={index}>{student.first_name}</Link>)}
+        <Header as='h3'>Test as a student: </Header>
+        {students &&
+          students.map((student, index) => (
+            <p>
+              <Link to={`/students/${student.id}`} key={index}>
+                {student.first_name}
+              </Link>
+            </p>
+          ))}
       </>
     );
   }
