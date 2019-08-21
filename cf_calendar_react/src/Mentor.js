@@ -13,7 +13,7 @@ export default class Mentor extends React.Component {
         time: entry.time,
         available: entry.available,
         entryId: entry.id,
-        duration: entry.duratio
+        duration: entry.duration
       };
       if (dates[entry.day]) {
         dates[entry.day].push(timeAndAvailability);

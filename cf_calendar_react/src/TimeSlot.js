@@ -7,10 +7,15 @@ import { axiosInstance } from './utils';
 
 
 export default class TimeSlot extends React.Component {
-  state = {
-    displayConfirmationForm: false,
-    displayErrorMessage: false
+  constructor (props) {
+    super(props);
+
   }
+  state = {
+       displayConfirmationForm: false,
+       displayErrorMessage: false
+     };
+
   onClick = () => {
     const { available } = this.props;
     const displayConfirmationForm = !this.state.displayConfirmationForm;
@@ -47,26 +52,38 @@ export default class TimeSlot extends React.Component {
     })
       .then(response => {
         const {data: event} = response;
-        this.props.history.push("/events/success", { event: event })
+        if (response.status === 200) {
+          this.props.history.push("/events/success", {
+            event: event
+          });
+        }
+
       })
       .catch()
   }
 
 
   render() {
-    const { time, available } = this.props;
+    const { time, available, duration } = this.props;
     const { displayConfirmationForm, displayErrorMessage } = this.state;
 
     return (
       <>
         <Button onClick={this.onClick}>
-          {time} - {available ? "Available" : "Not Available"}
+          {time} - {" "}
+          {available
+            ? `Available for ${duration} hour(s)`
+            : "Not Available"}{" "}
         </Button>
         {displayConfirmationForm && (
           <Form onSubmit={this.onSubmit}>
             <Form.Field>
               <label>Reason for this call</label>
-              <input type="textarea" name="description" placeholder="I need to learn Programming" />
+              <input
+                type="textarea"
+                name="description"
+                placeholder="I need to learn Programming"
+              />
             </Form.Field>
             <Button type="submit">Confirm Call</Button>
           </Form>

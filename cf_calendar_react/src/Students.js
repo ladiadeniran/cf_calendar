@@ -33,8 +33,8 @@ export default class Students extends React.Component {
         <Header as='h3'>Test as a student: </Header>
         {students &&
           students.map((student, index) => (
-            <p>
-              <Link to={`/students/${student.id}`} key={index}>
+            <p key={index}>
+              <Link to={`/students/${student.id}`}>
                 {student.first_name}
               </Link>
             </p>

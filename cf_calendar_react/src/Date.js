@@ -17,22 +17,20 @@ export default class Date extends React.Component {
   }
 
   render() {
-    let { date, timeSlots, studentId, mentorId } = this.props;
-    date = moment(`${date}`).format("MMMM Do YYYY");
+    const { date, timeSlots, studentId, mentorId } = this.props;
+    const day = moment(`${date}`).format("MMMM Do YYYY");
     const { displayTimeSlots } = this.state;
     return (
       <div>
         <Button primary onClick={this.handleClick}>
-          {date}
+          {day}
         </Button>
         {displayTimeSlots &&
           timeSlots.map((slot, index) => {
             const dateTime = moment(`${date} ${slot.time}`).format(
-              "MMMM Do YYYY, h:mm"
+              "YYYY-MM-DD h:mm:ss"
             );
-            const time = moment(`${slot.time}`, "HH:mm").format(
-              "h:mm A"
-            );
+            const time = moment(`${slot.time}`, "HH:mm").format("h:mm A");
             return (
               <div key={index}>
                 <TimeSlot
@@ -46,7 +44,7 @@ export default class Date extends React.Component {
                 />
               </div>
             );
-        })}
+          })}
         <Divider hidden />
       </div>
     );
