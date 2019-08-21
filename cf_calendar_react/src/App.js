@@ -6,6 +6,7 @@ import Students from "./Students";
 import Student from "./Student";
 import Date from "./Date";
 import NotFoundPage from "./NotFoundPage";
+import EventCreateSuccess from "./EventCreateSuccess";
 
 class App extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
               path="/:studentId/schedule/:mentorId"
               component={Date}
             />
+            <Route exact path="/events/success" component={EventCreateSuccess}/>
             <Route component={NotFoundPage} />
           </Switch>
         </Container>

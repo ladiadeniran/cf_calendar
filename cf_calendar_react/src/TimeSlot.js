@@ -5,6 +5,7 @@ import { Button, Form } from "semantic-ui-react";
 import { axiosInstance } from './utils';
 
 
+
 export default class TimeSlot extends React.Component {
   state = {
     displayConfirmationForm: false,
@@ -26,7 +27,13 @@ export default class TimeSlot extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { calenderEntryId, studentId, mentorId, duration, date } = this.props;
+    const {
+      calenderEntryId,
+      studentId,
+      mentorId,
+      duration,
+      date
+    } = this.props;
     const event = {
       student_id: studentId,
       mentor_id: mentorId,
@@ -37,7 +44,12 @@ export default class TimeSlot extends React.Component {
     axiosInstance.post("/events", {
       event,
       entry_id: calenderEntryId
-    });
+    })
+      .then(response => {
+        const {data: event} = response;
+        this.props.history.push("/events/success", { event: event })
+      })
+      .catch()
   }
 
 
@@ -70,5 +82,8 @@ export default class TimeSlot extends React.Component {
 TimeSlot.propTypes = {
   calenderEntryId: PropTypes.number.isRequired,
   available: PropTypes.bool.isRequired,
-  time: PropTypes.string.isRequired
+  time: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  studentId: PropTypes.number.isRequired,
+  mentorId: PropTypes.number.isRequired
 };

@@ -27,8 +27,9 @@ export default class Date extends React.Component {
         </Button>
         {displayTimeSlots &&
           timeSlots.map((slot, index) => {
-            const dateObject = moment(`${date} ${slot.time}`)
-            const date
+            const dateTime = moment(`${date} ${slot.time}`).format(
+              "MMMM Do YYYY, h:mm"
+            );
             const time = moment(`${slot.time}`, "HH:mm").format(
               "h:mm A"
             );
@@ -36,10 +37,12 @@ export default class Date extends React.Component {
               <div key={index}>
                 <TimeSlot
                   time={time}
+                  date={dateTime}
                   studentId={studentId}
                   mentorId={mentorId}
                   available={slot.available}
-                  calenderEntryId={slot.calenderEntryId}
+                  calenderEntryId={slot.entryId}
+                  duration={slot.duration}
                 />
               </div>
             );
