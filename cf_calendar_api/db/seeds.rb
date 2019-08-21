@@ -22,8 +22,8 @@ StudentMentor.create!(student_id: user_2.id, mentor_id: user_3.id)
 StudentMentor.create!(student_id: user_2.id, mentor_id: user_4.id)
 
 CalendarEntry.create!(user_id: user_3.id, day: Date.today, time: Time.now.end_of_day.to_s(:time), duration: 1)
-CalendarEntry.create!(user_id: user_3.id, day: (Date.today + 1.day), time: Time.now.end_of_day.to_s(:time), duration: 1)
-CalendarEntry.create!(user_id: user_3.id, day: (Date.today + 2.days), time: Time.now.end_of_day.to_s(:time), duration: 1)
+CalendarEntry.create!(user_id: user_3.id, day: Date.today + 1.day, time: Time.now.end_of_day.to_s(:time), duration: 1)
+CalendarEntry.create!(user_id: user_3.id, day: Date.today + 2.day, time: Time.now.end_of_day.to_s(:time), duration: 1)
 
 CalendarEntry.create!(user_id: user_4.id, day: Date.today, time: Time.now.end_of_day.to_s(:time), duration: 1)
 CalendarEntry.create!(user_id: user_4.id, day: Date.today + 1.day, time: Time.now.end_of_day.to_s(:time), duration: 1)

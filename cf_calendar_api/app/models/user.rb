@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   scope :students, -> { joins("INNER JOIN student_mentors on users.id = student_mentors.student_id").distinct.order(:first_name) }
   scope :mentors, -> { joins("INNER JOIN student_mentors on users.id = student_mentors.mentor_id").distinct.order(:first_name) }
-  scope :with_future_schedules, -> { joins(:calendar_entries).where("day >= '#{Date.today}'::DATE AND time >= '#{Time.now.to_s(:time)}'::TIME AND available IS TRUE").distinct }
+  scope :with_future_schedules, -> { joins(:calendar_entries).where("day >= '#{Date.today}'::DATE AND time >= '#{Time.now.to_s(:time)}'::TIME").distinct }
 
   class << self
     def my_mentors(student_id)
