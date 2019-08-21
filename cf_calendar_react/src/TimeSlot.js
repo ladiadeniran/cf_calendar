@@ -1,44 +1,46 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { withRouter } from "react-router-dom";
 import { Button, Form } from "semantic-ui-react";
 import { axiosInstance } from './utils';
 
 
 
-export default class TimeSlot extends React.Component {
-  constructor (props) {
-    super(props);
+class TimeSlot extends React.Component {
+  static propTypes = {
+    calenderEntryId: PropTypes.number.isRequired,
+    available: PropTypes.bool.isRequired,
+    time: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    studentId: PropTypes.number.isRequired,
+    mentorId: PropTypes.number.isRequired
+  };
 
+  constructor(props) {
+    super(props);
   }
   state = {
-       displayConfirmationForm: false,
-       displayErrorMessage: false
-     };
+    displayConfirmationForm: false,
+    displayErrorMessage: false
+  };
 
   onClick = () => {
     const { available } = this.props;
     const displayConfirmationForm = !this.state.displayConfirmationForm;
     if (available) {
-       this.setState(() => ({
-         displayConfirmationForm
-       }));
+      this.setState(() => ({
+        displayConfirmationForm
+      }));
     } else {
       this.setState(() => ({
         displayErrorMessage: true
       }));
     }
-  }
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
-    const {
-      calenderEntryId,
-      studentId,
-      mentorId,
-      duration,
-      date
-    } = this.props;
+    const { calenderEntryId, studentId, mentorId, duration, date } = this.props;
     const event = {
       student_id: studentId,
       mentor_id: mentorId,
@@ -46,22 +48,21 @@ export default class TimeSlot extends React.Component {
       date,
       description: e.target["description"].value
     };
-    axiosInstance.post("/events", {
-      event,
-      entry_id: calenderEntryId
-    })
+    axiosInstance
+      .post("/events", {
+        event,
+        entry_id: calenderEntryId
+      })
       .then(response => {
-        const {data: event} = response;
+        const { data: event } = response;
         if (response.status === 200) {
           this.props.history.push("/events/success", {
             event: event
           });
         }
-
       })
-      .catch()
-  }
-
+      .catch();
+  };
 
   render() {
     const { time, available, duration } = this.props;
@@ -70,10 +71,8 @@ export default class TimeSlot extends React.Component {
     return (
       <>
         <Button onClick={this.onClick}>
-          {time} - {" "}
-          {available
-            ? `Available for ${duration} hour(s)`
-            : "Not Available"}{" "}
+          {time} -{" "}
+          {available ? `Available for ${duration} hour(s)` : "Not Available"}{" "}
         </Button>
         {displayConfirmationForm && (
           <Form onSubmit={this.onSubmit}>
@@ -96,11 +95,4 @@ export default class TimeSlot extends React.Component {
   }
 }
 
-TimeSlot.propTypes = {
-  calenderEntryId: PropTypes.number.isRequired,
-  available: PropTypes.bool.isRequired,
-  time: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  studentId: PropTypes.number.isRequired,
-  mentorId: PropTypes.number.isRequired
-};
+export default withRouter(TimeSlot);
