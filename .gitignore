@@ -1,5 +1,7 @@
 .idea/
+/cf_calendar_api/log/development.log
 node_modules/
 tmp/
 log/
 log/development.log
+*.log
